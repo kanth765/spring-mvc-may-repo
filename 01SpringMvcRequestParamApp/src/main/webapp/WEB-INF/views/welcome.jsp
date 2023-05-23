@@ -10,12 +10,8 @@
 
 	<h1>welcome to request get parameter method....</h1>
 
-	<% String messge=(String)request.getParameter("name"); 
-
-	 out.println(messge); 
-	 %>
-	 
 	 ${name}
+	 
 
 </body>
 </html>

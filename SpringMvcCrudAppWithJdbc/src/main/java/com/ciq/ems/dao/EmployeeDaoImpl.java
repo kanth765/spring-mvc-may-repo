@@ -14,7 +14,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
 	private JdbcTemplate jdbcTemplate;
 
 	@Override
-	public void save(Employee employee) {
+	public void save(Employee employee) {	
 
 		int result = jdbcTemplate.update("insert into employee values(?,?,?)",
 				new Object[] { employee.getId(), employee.getName(), employee.getSalary() });

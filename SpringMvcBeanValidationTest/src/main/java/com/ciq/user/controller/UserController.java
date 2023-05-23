@@ -41,7 +41,7 @@ public class UserController {
 		// used add attribute in session temporarly...
 		// after success page is rendered it saved user is removed from the session
 		// but in success it is avalaibe
-		return "redirect:/user/userDetails";
+		return "redirect:/users/userDetails";
 
 	}
 

@@ -11,28 +11,28 @@
 	<table>
 		<tr>
 			<td>employee id:</td>
-			<td>${employee1.id}</td>
+			<td>${employee.id}</td>
 		</tr>
 		<tr>
 			<td>employee name:</td>
-			<td>${employee1.name}</td>
+			<td>${employee.name}</td>
 		</tr>
 		<tr>
 			<td>employee salary:</td>
-			<td>${employee1.salary}</td>
+			<td>${employee.salary}</td>
 		</tr>
 		<tr>
 			<td>employee mobile:</td>
-			<td>${employee1.mobileNumber}</td>
+			<td>${employee.mobileNumber}</td>
 		</tr>
 		<tr>
 			<td>employee dob:</td>
-			<td>${employee1.dob}</td>
+			<td>${employee.dob}</td>
 		</tr>
-		
+
 		<td>${messages}</td>
 	</table>
-	
-	
+
+
 </body>
 </html>

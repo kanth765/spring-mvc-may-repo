@@ -67,5 +67,12 @@ public class EmployeeController {
 		employeeServiceImpl.update(employee);
 		return "redirect:/listEmps";
 	}
+	
+	
+	@GetMapping("/deleteEmp")
+	public String delete(int id) {
+		employeeServiceImpl.delete(id);
+		return "redirect:/listEmps";
+	}
 
 }

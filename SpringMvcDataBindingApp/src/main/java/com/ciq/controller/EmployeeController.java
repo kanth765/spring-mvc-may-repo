@@ -4,6 +4,8 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -23,9 +25,10 @@ public class EmployeeController {
 
 	@InitBinder
 	public void InitBinder(WebDataBinder binder) {
-		binder.setDisallowedFields(new String[] { "mobileNumber" });
-		SimpleDateFormat formatter = new SimpleDateFormat("yyyy****mm****dd");
-		binder.registerCustomEditor(Date.class, "dob", new CustomDateEditor(formatter, false));
+//		binder.setDisallowedFields(new String[] { "mobileNumber" });
+//		SimpleDateFormat formatter = new SimpleDateFormat("yyyy****mm****dd");
+//		binder.registerCustomEditor(Date.class, "dob", new CustomDateEditor(formatter, false));
+//		binder.registerCustomEditor(Employee.class, "name", new CustomeNameBinder());
 	}
 
 	// creating handler method to load the register form
@@ -38,14 +41,13 @@ public class EmployeeController {
 	@ModelAttribute
 	public void addAllmodels(Model model, Employee employee) {
 //		model.addAttribute("employee1", employee);
-		model.addAttribute("messages", "welcome to model addtributes");
+//		model.addAttribute("messages", "welcome to model addtributes");
 	}
 
-	
 	@RequestMapping(value = "register", method = RequestMethod.POST)
 //	@ModelAttribute("employee1")
 
-	public ModelAndView registerEmployee(@ModelAttribute("employee1") Employee employee, BindingResult bindingResult) {
+	public ModelAndView registerEmployee(@Valid @ModelAttribute Employee employee, BindingResult bindingResult) {
 		if (bindingResult.hasErrors()) {
 			return new ModelAndView("reg-emp");
 		}
@@ -77,5 +79,4 @@ public class EmployeeController {
 //
 //	}
 
-	
 }

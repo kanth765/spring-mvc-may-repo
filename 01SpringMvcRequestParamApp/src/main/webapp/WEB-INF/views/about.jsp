@@ -8,5 +8,7 @@
 </head>
 <body>
 	<h1>aabout jsp file</h1>
+	
+	${name}
 </body>
 </html>

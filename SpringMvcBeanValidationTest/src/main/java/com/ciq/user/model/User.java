@@ -14,13 +14,13 @@ import org.springframework.web.multipart.MultipartFile;
 
 public class User {
 
-	@Size(min = 2 , max = 30 , message = "size of the name must be between 2 and 30")
+	@Size(min = 2 , max = 30 )
 	private String name;
 	@Email(message = "Email must follow the Formatter:****@***")
 	@NotBlank(message = "email must be a value")
 	private String email;
 	@Min(value = 18, message = "must be greater than or equal to 18")
-	@NotNull(message = "age is required field")
+	@NotNull
 	private Integer age;
 	@NotNull(message = "birthday is required field")
 	@DateTimeFormat(pattern = "mm-DD-yyyy")

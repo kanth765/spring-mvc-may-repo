@@ -2,12 +2,21 @@ package com.ciq.model;
 
 import java.util.Date;
 
+import javax.validation.constraints.Min;
+import javax.validation.constraints.Size;
+
+import org.springframework.format.annotation.NumberFormat;
+
 public class Employee {
 
+//	@UniqueElements
+	@NumberFormat(pattern = "##########")
 	private int id;
+	@Size(min = 2 , max = 30, message = "please enter at least 3 characters")
 	private String name;
 	private double salary;
 	private long mobileNumber;
+//	@DateTimeFormat
 	private Date dob;
 
 	public Employee() {
