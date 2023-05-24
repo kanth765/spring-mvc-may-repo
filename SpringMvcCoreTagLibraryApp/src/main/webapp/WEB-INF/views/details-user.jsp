@@ -8,6 +8,7 @@
 </head>
 <body>
 	<h1>user success page!!!</h1>
+	<p>${application} </p>
 	<p>user Name: ${user.name}</p>
 	<p>user email: ${user.email}</p>
 	<p>user birthday: ${user.birthday}</p>

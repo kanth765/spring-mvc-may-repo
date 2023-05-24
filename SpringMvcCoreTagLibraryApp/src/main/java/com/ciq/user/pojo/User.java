@@ -17,7 +17,7 @@ public class User {
 	@Size(min = 2, max = 30)
 	private String name;
 	@Email(message = "Email must follow the Formatter:****@***")
-	@NotBlank(message = "email must be a value")
+	@NotBlank(message = "{email.notnull}")
 	private String email;
 //	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	@NotNull(message = "birthday is required field")
@@ -97,7 +97,5 @@ public class User {
 		return "User [name=" + name + ", email=" + email + ", birthday=" + birthday + ", age=" + age + ", role=" + role
 				+ ", address=" + address + "]";
 	}
-	
-	
 
 }

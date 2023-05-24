@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1" isELIgnored="false"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,28 +15,32 @@
 </style>
 </head>
 <body>
-
+	${sa} ${application}
 	<h1>User Registration Form</h1>
 
 	<form:form modelAttribute="user">
-<%-- 		<form:errors path="*" cssClass="error" /> --%>
+		<%-- 		<form:errors path="*" cssClass="error" /> --%>
 		<table>
 			<tr>
 				<td>USER NAME:</td>
-				<td><form:input path="name" /><form:errors path="name" cssClass="error" /></td>
+				<td><form:input path="name" /> <form:errors path="name"
+						cssClass="error" /></td>
 			</tr>
 			<tr>
 				<td>EMAIL:</td>
-				<td><form:input path="email" /><form:errors path="email" cssClass="error" /></td>
+				<td><form:input path="email" /> <form:errors path="email"
+						cssClass="error" /></td>
 			</tr>
 			<tr>
 				<td>BIRTHDAY:</td>
-				<td><form:input path="birthday" /> <form:errors path="birthday" cssClass="error" /></td>
+				<td><form:input path="birthday" /> <form:errors
+						path="birthday" cssClass="error" /></td>
 			</tr>
 
 			<tr>
 				<td>AGE:</td>
-				<td><form:input path="age" /><form:errors path="age" cssClass="error" /></td>
+				<td><form:input path="age" /> <form:errors path="age"
+						cssClass="error" /></td>
 			</tr>
 			<tr>
 				<td>select Role:</td>
@@ -45,19 +50,24 @@
 
 					</form:select>
 			</tr>
-			<tr><td>address info: </td> </tr>
+			<tr>
+				<td>address info:</td>
+			</tr>
 			<tr>
 				<td>street:</td>
-				<td><form:input path="address.street" /><form:errors path="address.street" cssClass="error" /></td>
+				<td><form:input path="address.street" /> <form:errors
+						path="address.street" cssClass="error" /></td>
 			</tr>
-			
+
 			<tr>
 				<td>state:</td>
-				<td><form:input path="address.state" /><form:errors path="address.state" cssClass="error" /></td>
+				<td><form:input path="address.state" /> <form:errors
+						path="address.state" cssClass="error" /></td>
 			</tr>
 			<tr>
 				<td>zipcode:</td>
-				<td><form:input path="address.zipcode" /><form:errors path="address.zipcode" cssClass="error" /></td>
+				<td><form:input path="address.zipcode" /> <form:errors
+						path="address.zipcode" cssClass="error" /></td>
 			</tr>
 
 
