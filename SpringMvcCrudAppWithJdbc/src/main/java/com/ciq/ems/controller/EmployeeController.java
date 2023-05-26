@@ -32,9 +32,9 @@ public class EmployeeController {
 	@PostMapping(value = "/save")
 	public ModelAndView saveEmp(@ModelAttribute Employee employee, BindingResult result) {
 
-		if (result.hasErrors()) {
-			return new ModelAndView("emp-save");
-		}
+//		if (result.hasErrors()) {
+//			return new ModelAndView("emp-save");
+//		}
 		ModelAndView modelAndView = new ModelAndView();
 		employeeServiceImpl.save(employee);
 		System.out.println(employee);
